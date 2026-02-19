@@ -3,120 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Сантехник Бишкек</title>
+<title>Сантехник Бишкек — Выезд 24/7</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #333;
+  margin:0;
+  font-family: Arial, sans-serif;
+  line-height:1.6;
 }
 
-.container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
+header {
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+}
+
+h1 { margin:0 0 15px; font-size:32px; }
+h2 { text-align:center; margin-bottom:30px; }
+
+.btn {
+  display:inline-block;
+  padding:15px 25px;
+  margin:10px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+}
+
+.btn-call { background:#e53935; }
+.btn-wa { background:#25D366; }
+
+section { padding:50px 20px; }
+
+.container { max-width:1000px; margin:0 auto; }
+
+.services, .advantages {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    text-align: center;
+  background:#f5f5f5;
+  padding:20px;
+  border-radius:8px;
+  text-align:center;
 }
 
-h1 {
-    margin-bottom: 10px;
-    color: #2a5298;
+.prices p {
+  font-size:18px;
+  padding:10px 0;
+  border-bottom:1px solid #ddd;
 }
 
-.subtitle {
-    margin-bottom: 20px;
-    color: #666;
+footer {
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 
-.phone {
-    display: block;
-    margin: 10px 0;
-    padding: 14px;
-    border-radius: 10px;
-    background: #f2f2f2;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
+.fixed-call {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#e53935;
+  text-align:center;
+  padding:15px;
 }
 
-.cta {
-    display: block;
-    margin-top: 15px;
-    padding: 15px;
-    background: #ff3b3b;
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.whatsapp {
-    display: block;
-    margin-top: 10px;
-    padding: 14px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-}
-
-ul {
-    text-align: left;
-    padding-left: 20px;
+.fixed-call a {
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <h1>Сантехник Бишкек</h1>
+  <p>Выезд за 30 минут • Работаем 24/7</p>
+  <a href="tel:+996705204886" class="btn btn-call">📞 Позвонить</a>
+  <a href="https://wa.me/996705204886" class="btn btn-wa">🟢 WhatsApp</a>
+</header>
+
+<section>
 <div class="container">
-
-<div class="card">
-    <h1>Сантехник Бишкек</h1>
-    <div class="subtitle">Выезд 24/7. Срочный ремонт за 30 минут.</div>
-
-    <a class="phone" href="tel:+996705204886">📞 +996 705 204 886</a>
-    <a class="phone" href="tel:+996705148107">📞 +996 705 148 107</a>
-
-    <a class="cta" href="tel:+996705204886">🚨 Вызвать мастера</a>
-    <a class="whatsapp" href="https://wa.me/996705204886">💬 Написать в WhatsApp</a>
+<h2>Почему выбирают нас</h2>
+<div class="advantages">
+  <div class="card">🚀 Быстрый выезд</div>
+  <div class="card">💰 Честные цены</div>
+  <div class="card">🛠 Опыт более 10 лет</div>
+  <div class="card">✅ Гарантия на работу</div>
 </div>
-
-<div class="card">
-    <h2>Наши услуги</h2>
-    <ul>
-        <li>Устранение засоров</li>
-        <li>Замена труб</li>
-        <li>Установка унитаза</li>
-        <li>Замена смесителя</li>
-        <li>Ремонт бойлера</li>
-        <li>Поиск и устранение протечек</li>
-    </ul>
 </div>
+</section>
 
-<div class="card">
-    <h2>Почему выбирают нас?</h2>
-    <ul>
-        <li>✔ Выезд 24/7 без выходных</li>
-        <li>✔ Приезд за 30–60 минут</li>
-        <li>✔ Гарантия на работу</li>
-        <li>✔ Честные цены</li>
-    </ul>
+<section style="background:#fafafa;">
+<div class="container">
+<h2>Наши услуги</h2>
+<div class="services">
+  <div class="card">🚿 Устранение засоров</div>
+  <div class="card">🚰 Замена смесителя</div>
+  <div class="card">🚽 Установка унитаза</div>
+  <div class="card">🔥 Установка бойлера</div>
+  <div class="card">🔧 Замена труб</div>
+  <div class="card">🏠 Монтаж радиаторов</div>
 </div>
+</div>
+</section>
 
+<section>
+<div class="container">
+<h2>Цены на услуги</h2>
+<div class="prices">
+  <p>🚿 Устранение засора — <strong>от 800 сом</strong></p>
+  <p>🚰 Замена смесителя — <strong>от 700 сом</strong></p>
+  <p>🚽 Установка унитаза — <strong>от 1500 сом</strong></p>
+  <p>🔥 Установка бойлера — <strong>от 1500 сом</strong></p>
+  <p>🔧 Замена труб — <strong>от 1000 сом</strong></p>
+  <p style="font-size:14px;color:gray;">
+  *Точная стоимость зависит от сложности работы. Цена согласовывается до начала работ.
+  </p>
+</div>
+</div>
+</section>
+
+<section style="background:#fafafa;">
+<div class="container">
+<h2>Отзывы клиентов</h2>
+<div class="services">
+  <div class="card">⭐⭐⭐⭐⭐<br>Очень быстро приехали и всё сделали аккуратно!</div>
+  <div class="card">⭐⭐⭐⭐⭐<br>Честная цена, без накруток. Рекомендую.</div>
+  <div class="card">⭐⭐⭐⭐⭐<br>Работают профессионально, буду обращаться ещё.</div>
+</div>
+</div>
+</section>
+
+<footer>
+  📞 Основной номер: +996 705 204 886<br>
+  📞 Дополнительный: +996 705 148 107<br>
+  Бишкек • Работаем 24/7
+</footer>
+
+<div class="fixed-call">
+  <a href="tel:+996705204886">📞 Позвонить сейчас</a>
 </div>
 
 </body>
