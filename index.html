@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Сантехник Бишкек 24/7 — Срочный выезд</title>
+<title>Сантехник Бишкек 24/7</title>
 
 <style>
 body{
@@ -13,57 +13,57 @@ body{
   color:#222;
 }
 
+/* ===== Верхняя панель ===== */
+
+.top-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:white;
+  font-weight:bold;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+  font-size:20px;
+}
+
+.logo span{
+  color:#00bcd4;
+}
+
+.menu{
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* ===== Главный блок ===== */
+
 .hero{
-  background:
-  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-  url('master.png');
-  background-size:cover;
-  background-position:center;
-  padding:120px 20px;
   text-align:center;
-  color:white;
+  padding:40px 20px 60px;
 }
 
 .hero h1{
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:38px;
+  margin:10px 0;
 }
 
-.hero span{ color:#00c6ff; }
+.hero h1 span{
+  color:#00bcd4;
+}
 
-.subtitle{ font-size:22px; margin-bottom:10px; }
-
-.advantages{
+.hero p{
   font-size:18px;
-  color:#00ffcc;
-  margin-bottom:30px;
+  color:#555;
 }
 
-.btn{
-  display:inline-block;
-  padding:18px 35px;
-  margin:10px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-  transition:0.3s;
+/* ===== Секции ===== */
+
+section{
+  padding:60px 20px;
 }
-
-.btn-call{
-  background:#ff3b3b;
-  animation:pulse 1.5s infinite;
-}
-
-.btn-wa{ background:#25D366; }
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(255,59,59,0.7);}
-  70%{box-shadow:0 0 0 15px rgba(255,59,59,0);}
-  100%{box-shadow:0 0 0 0;}
-}
-
-section{ padding:70px 20px; }
 
 .container{
   max-width:1100px;
@@ -73,7 +73,6 @@ section{ padding:70px 20px; }
 h2{
   text-align:center;
   margin-bottom:40px;
-  font-size:28px;
 }
 
 .grid{
@@ -100,16 +99,14 @@ h2{
 .service-card img{
   width:100%;
   height:220px;
-  object-fit:cover;
+  object-fit:contain;
+  background:white;
+  padding:20px;
 }
 
 .service-content{
   padding:20px;
   text-align:center;
-}
-
-.service-content h3{
-  margin:10px 0;
 }
 
 .price{
@@ -130,10 +127,6 @@ h2{
 
 /* ===== Почему мы ===== */
 
-.why{
-  background:white;
-}
-
 .card{
   background:white;
   padding:30px;
@@ -144,7 +137,7 @@ h2{
 
 /* ===== Карта ===== */
 
-.map iframe{
+iframe{
   border-radius:20px;
 }
 
@@ -157,41 +150,52 @@ footer{
   padding:30px;
 }
 
-/* ===== Кнопка звонка фиксированная ===== */
+/* ===== Круглая кнопка WhatsApp ===== */
 
-.fixed-call{
+.whatsapp-float{
   position:fixed;
   bottom:20px;
   right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  z-index:1000;
+  animation:pulse 2s infinite;
 }
 
-.fixed-call a{
-  background:#ff3b3b;
-  color:white;
-  padding:15px 20px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+.whatsapp-float img{
+  width:32px;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6);}
+  70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0;}
 }
 </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <h1>САНТЕХНИК <span>БИШКЕК 24/7</span></h1>
-  <div class="subtitle">Засор? Течёт кран? Прорвало трубу?</div>
-  <div class="advantages">🚀 Выезд за 30 минут • 💰 Честные цены • ✅ Гарантия</div>
+<!-- Верх -->
+<div class="top-bar">
+  <div class="logo">SANTEH <span>SERVICE</span></div>
+  <div>+996 705 204 886</div>
+  <div class="menu">☰</div>
+</div>
 
-  <a href="tel:+996705204886" class="btn btn-call">📞 Позвонить</a>
-  <a href="https://wa.me/996705204886" class="btn btn-wa">🟢 WhatsApp</a>
+<div class="hero">
+  <div style="color:#777;">Сервисный центр → Сантехник</div>
+  <h1>САНТЕХНИК <span>БИШКЕК</span></h1>
+  <p>Бесплатный выезд сантехника на объект занимает 30 минут!</p>
+</div>
 
-  <div style="margin-top:20px; opacity:0.9;">
-    📞 +996 705 204 886 | +996 705 148 107
-  </div>
-</header>
-
-<!-- ===== УСЛУГИ ===== -->
+<!-- Услуги -->
 
 <section>
 <div class="container">
@@ -204,9 +208,7 @@ footer{
   <div class="service-content">
     <h3>🚿 Устранение засоров</h3>
     <div class="price">от 800 сом</div>
-    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора" class="service-btn">
-      Заказать в WhatsApp
-    </a>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора" class="service-btn">Заказать</a>
   </div>
 </div>
 
@@ -215,9 +217,7 @@ footer{
   <div class="service-content">
     <h3>🚰 Замена смесителя</h3>
     <div class="price">от 700 сом</div>
-    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя" class="service-btn">
-      Заказать в WhatsApp
-    </a>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя" class="service-btn">Заказать</a>
   </div>
 </div>
 
@@ -226,9 +226,7 @@ footer{
   <div class="service-content">
     <h3>🚽 Установка унитаза</h3>
     <div class="price">от 1500 сом</div>
-    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза" class="service-btn">
-      Заказать в WhatsApp
-    </a>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза" class="service-btn">Заказать</a>
   </div>
 </div>
 
@@ -237,9 +235,7 @@ footer{
   <div class="service-content">
     <h3>🔥 Установка бойлера</h3>
     <div class="price">от 2000 сом</div>
-    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера" class="service-btn">
-      Заказать в WhatsApp
-    </a>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера" class="service-btn">Заказать</a>
   </div>
 </div>
 
@@ -247,43 +243,39 @@ footer{
 </div>
 </section>
 
-<!-- ===== ПОЧЕМУ МЫ ===== -->
+<!-- Почему мы -->
 
-<section class="why">
+<section>
 <div class="container">
 <h2>Почему выбирают нас</h2>
 <div class="grid">
-  <div class="card">✅ Работаем 24/7 без выходных</div>
+  <div class="card">✅ Работаем 24/7</div>
   <div class="card">🚀 Приезжаем за 30 минут</div>
-  <div class="card">💰 Честные цены без скрытых доплат</div>
+  <div class="card">💰 Честные цены</div>
   <div class="card">🛠 Опыт более 10 лет</div>
 </div>
 </div>
 </section>
 
-<!-- ===== КАРТА ===== -->
+<!-- Карта -->
 
-<section class="map">
+<section>
 <div class="container">
 <h2>Работаем по всему Бишкеку</h2>
-
-<iframe 
-src="https://maps.google.com/maps?q=Бишкек&t=&z=12&ie=UTF8&iwloc=&output=embed" 
-width="100%" height="400" style="border:0;">
-</iframe>
-
+<iframe src="https://maps.google.com/maps?q=Бишкек&t=&z=12&ie=UTF8&iwloc=&output=embed"
+width="100%" height="400" style="border:0;"></iframe>
 </div>
 </section>
 
 <footer>
-  📞 Основной: +996 705 204 886<br>
-  📞 Дополнительный: +996 705 148 107<br>
-  Бишкек • Работаем 24/7
+📞 +996 705 204 886<br>
+Бишкек • Работаем 24/7
 </footer>
 
-<div class="fixed-call">
-  <a href="tel:+996705204886">📞 Позвонить</a>
-</div>
+<!-- Кнопка WhatsApp -->
+<a href="https://wa.me/996705204886?text=Здравствуйте" class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 </body>
 </html>
