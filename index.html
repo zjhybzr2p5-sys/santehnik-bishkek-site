@@ -1,53 +1,169 @@
-<header style="
-background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url('master.png');
-background-size:cover;
-background-position:center;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сантехник Бишкек 24/7 — Выезд за 30 минут</title>
+
+<meta name="description" content="Сантехник Бишкек 24/7. Срочный выезд за 30 минут. Устранение засоров, установка унитаза, бойлера, замена труб. Честные цены.">
+
+<style>
+body {margin:0;font-family:'Segoe UI',Arial;background:#f4f6f9;color:#222;}
+
+header{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+background-color:#1e3c72;
 padding:100px 20px;
 color:white;
 text-align:center;
-">
+}
 
-  <h1 style="font-size:42px; margin-bottom:20px;">
-    САНТЕХНИК <span style="color:#00c6ff;">БИШКЕК 24/7</span>
-  </h1>
+h1{font-size:40px;margin-bottom:20px;}
+h2{text-align:center;margin-bottom:40px;}
 
-  <p style="font-size:22px; margin-bottom:15px;">
-    Засор? Течёт кран? Прорвало трубу?
-  </p>
+.btn{
+display:inline-block;
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+margin:10px;
+font-size:18px;
+}
 
-  <p style="font-size:20px; margin-bottom:30px; color:#00ffcc;">
-    🚀 Выезд за 30 минут • 💰 Честные цены • ✅ Гарантия
-  </p>
+.btn-call{background:#ff3b3b;animation:pulse 1.8s infinite;}
+.btn-wa{background:#25D366;}
 
-  <a href="tel:+996705204886"
-     style="background:#ff3b3b;
-            padding:18px 35px;
-            border-radius:50px;
-            text-decoration:none;
-            color:white;
-            font-size:20px;
-            font-weight:bold;
-            display:inline-block;
-            margin:10px;">
-     📞 ПОЗВОНИТЬ СЕЙЧАС
-  </a>
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,59,59,0.7);}
+70%{box-shadow:0 0 0 15px rgba(255,59,59,0);}
+100%{box-shadow:0 0 0 0 rgba(255,59,59,0);}
+}
 
-  <a href="https://wa.me/996705204886"
-     style="background:#25D366;
-            padding:18px 35px;
-            border-radius:50px;
-            text-decoration:none;
-            color:white;
-            font-size:20px;
-            font-weight:bold;
-            display:inline-block;
-            margin:10px;">
-     🟢 НАПИСАТЬ В WHATSAPP
-  </a>
+section{padding:70px 20px;}
+.container{max-width:1100px;margin:0 auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
 
-  <div style="margin-top:25px; font-size:16px; opacity:0.9;">
-    📞 +996 705 204 886 &nbsp; | &nbsp; +996 705 148 107
-  </div>
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
+cursor:pointer;
+}
 
+.card:hover{transform:translateY(-5px);}
+
+.price{
+margin-top:10px;
+font-weight:bold;
+color:#1e3c72;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.fixed-call{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.fixed-call a{
+background:#ff3b3b;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>САНТЕХНИК БИШКЕК 24/7</h1>
+<p style="font-size:20px;margin-bottom:15px;">Засор? Течёт кран? Прорвало трубу?</p>
+<p style="font-size:18px;color:#00ffcc;margin-bottom:30px;">
+🚀 Выезд за 30 минут • 💰 Честные цены • ✅ Гарантия
+</p>
+
+<a href="tel:+996705204886" class="btn btn-call">📞 ПОЗВОНИТЬ СЕЙЧАС</a>
+<a href="https://wa.me/996705204886" class="btn btn-wa">🟢 НАПИСАТЬ В WHATSAPP</a>
+
+<div style="margin-top:20px;font-size:16px;">
+📞 +996 705 204 886 | +996 705 148 107
+</div>
 </header>
+
+<section>
+<div class="container">
+<h2>Наши услуги</h2>
+<div class="grid">
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора" style="text-decoration:none;color:inherit;">
+<div class="card">
+🚿 Устранение засоров
+<div class="price">от 800 сом</div>
+</div>
+</a>
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя" style="text-decoration:none;color:inherit;">
+<div class="card">
+🚰 Замена смесителя
+<div class="price">от 700 сом</div>
+</div>
+</a>
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза" style="text-decoration:none;color:inherit;">
+<div class="card">
+🚽 Установка унитаза
+<div class="price">от 1500 сом</div>
+</div>
+</a>
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера" style="text-decoration:none;color:inherit;">
+<div class="card">
+🔥 Установка бойлера
+<div class="price">от 1500 сом</div>
+</div>
+</a>
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20труб" style="text-decoration:none;color:inherit;">
+<div class="card">
+🔧 Замена труб
+<div class="price">от 1000 сом</div>
+</div>
+</a>
+
+<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужен%20срочный%20вызов%20сантехника" style="text-decoration:none;color:inherit;">
+<div class="card">
+🚨 Срочный вызов
+<div class="price">24/7</div>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<footer>
+📞 Основной: +996 705 204 886<br>
+📞 Дополнительный: +996 705 148 107<br>
+Бишкек • Работаем круглосуточно
+</footer>
+
+<div class="fixed-call">
+<a href="tel:+996705204886">📞 Позвонить</a>
+</div>
+
+</body>
+</html>
