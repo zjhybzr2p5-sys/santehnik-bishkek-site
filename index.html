@@ -47,6 +47,7 @@ body{
   text-decoration:none;
   font-weight:bold;
   color:white;
+  transition:0.3s;
 }
 
 .btn-call{
@@ -77,53 +78,77 @@ h2{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
 
-.card{
+/* ===== Карточки услуг ===== */
+
+.service-card{
   background:white;
-  padding:20px;
-  border-radius:15px;
+  border-radius:20px;
+  overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  text-align:center;
   transition:0.3s;
 }
 
-.card:hover{
+.service-card:hover{
   transform:translateY(-8px);
   box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-.card img{
+.service-card img{
   width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
+  height:220px;
+  object-fit:cover;
 }
 
-.card h3{
+.service-content{
+  padding:20px;
+  text-align:center;
+}
+
+.service-content h3{
   margin:10px 0;
 }
 
-.price-text{
+.price{
   color:#2a5298;
   font-weight:bold;
   margin-bottom:15px;
 }
 
-.whatsapp-btn{
+.service-btn{
   display:block;
   background:#25D366;
   color:white;
   padding:12px;
-  border-radius:8px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:bold;
 }
 
+/* ===== Почему мы ===== */
+
 .why{
   background:white;
 }
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+/* ===== Карта ===== */
+
+.map iframe{
+  border-radius:20px;
+}
+
+/* ===== Футер ===== */
 
 footer{
   background:#111;
@@ -131,6 +156,8 @@ footer{
   text-align:center;
   padding:30px;
 }
+
+/* ===== Кнопка звонка фиксированная ===== */
 
 .fixed-call{
   position:fixed;
@@ -164,55 +191,63 @@ footer{
   </div>
 </header>
 
+<!-- ===== УСЛУГИ ===== -->
+
 <section>
 <div class="container">
 <h2>Наши услуги</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="service-card">
   <img src="zasor.jpg">
-  <h3>🚿 Устранение засоров</h3>
-  <div class="price-text">от 800 сом</div>
-  <a class="whatsapp-btn"
-     href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора">
-     Заказать в WhatsApp
-  </a>
+  <div class="service-content">
+    <h3>🚿 Устранение засоров</h3>
+    <div class="price">от 800 сом</div>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора" class="service-btn">
+      Заказать в WhatsApp
+    </a>
+  </div>
 </div>
 
-<div class="card">
+<div class="service-card">
   <img src="smesitel.jpg">
-  <h3>🚰 Замена смесителя</h3>
-  <div class="price-text">от 700 сом</div>
-  <a class="whatsapp-btn"
-     href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя">
-     Заказать в WhatsApp
-  </a>
+  <div class="service-content">
+    <h3>🚰 Замена смесителя</h3>
+    <div class="price">от 700 сом</div>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя" class="service-btn">
+      Заказать в WhatsApp
+    </a>
+  </div>
 </div>
 
-<div class="card">
+<div class="service-card">
   <img src="unitaz.jpg">
-  <h3>🚽 Установка унитаза</h3>
-  <div class="price-text">от 1500 сом</div>
-  <a class="whatsapp-btn"
-     href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза">
-     Заказать в WhatsApp
-  </a>
+  <div class="service-content">
+    <h3>🚽 Установка унитаза</h3>
+    <div class="price">от 1500 сом</div>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза" class="service-btn">
+      Заказать в WhatsApp
+    </a>
+  </div>
 </div>
 
-<div class="card">
+<div class="service-card">
   <img src="boiler.jpg">
-  <h3>🔥 Установка бойлера</h3>
-  <div class="price-text">от 2000 сом</div>
-  <a class="whatsapp-btn"
-     href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера">
-     Заказать в WhatsApp
-  </a>
+  <div class="service-content">
+    <h3>🔥 Установка бойлера</h3>
+    <div class="price">от 2000 сом</div>
+    <a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера" class="service-btn">
+      Заказать в WhatsApp
+    </a>
+  </div>
 </div>
 
 </div>
 </div>
 </section>
+
+<!-- ===== ПОЧЕМУ МЫ ===== -->
 
 <section class="why">
 <div class="container">
@@ -226,13 +261,15 @@ footer{
 </div>
 </section>
 
-<section>
+<!-- ===== КАРТА ===== -->
+
+<section class="map">
 <div class="container">
 <h2>Работаем по всему Бишкеку</h2>
 
 <iframe 
 src="https://maps.google.com/maps?q=Бишкек&t=&z=12&ie=UTF8&iwloc=&output=embed" 
-width="100%" height="400" style="border:0; border-radius:15px;">
+width="100%" height="400" style="border:0;">
 </iframe>
 
 </div>
