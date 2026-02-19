@@ -4,63 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Сантехник Бишкек</title>
+
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
-.header {
-    background: #0d6efd;
-    color: white;
-    padding: 30px 15px;
+h1 {
+    margin-bottom: 10px;
+    color: #2a5298;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-.section {
-    padding: 25px 15px;
+.subtitle {
+    margin-bottom: 25px;
+    color: #666;
 }
 
 .phone {
-    font-size: 20px;
-    margin: 10px 0;
+    display: block;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
     font-weight: bold;
+}
+
+.phone:hover {
+    background: #e6e6e6;
 }
 
 .whatsapp-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 25px;
+    padding: 14px 20px;
     background: #25D366;
     color: white;
     text-decoration: none;
+    border-radius: 12px;
     font-size: 18px;
-    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .whatsapp-btn:hover {
-    opacity: 0.9;
+    opacity: 0.85;
 }
 </style>
+
 </head>
 <body>
 
-<div class="header">
+<div class="card">
     <h1>Сантехник Бишкек</h1>
-    <p>Выезд 24/7. Быстро и качественно.</p>
-</div>
+    <div class="subtitle">Выезд 24/7. Быстро и качественно.</div>
 
-<div class="section">
-    <div class="phone">📞 +996 705 204 886</div>
-    <div class="phone">📞 +996 705 148 107</div>
+    <a class="phone" href="tel:+996705204886">📞 +996 705 204 886</a>
+    <a class="phone" href="tel:+996705148107">📞 +996 705 148 107</a>
 
-    <a class="whatsapp-btn" href="https://wa.me/996705204886" target="_blank">
+    <a class="whatsapp-btn" href="https://wa.me/996705204886">
         Написать в WhatsApp
     </a>
 </div>
