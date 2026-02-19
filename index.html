@@ -25,48 +25,68 @@ body{
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo{
-  font-size:20px;
-}
+.logo span{ color:#00bcd4; }
 
-.logo span{
-  color:#00bcd4;
-}
+.menu{ font-size:26px; }
 
-.menu{
-  font-size:26px;
-}
-
-/* Главный блок */
+/* Hero */
 
 .hero{
   text-align:center;
-  padding:40px 20px 60px;
+  padding:50px 20px;
+  background:linear-gradient(135deg,#00bcd4,#2a5298);
+  color:white;
 }
 
 .hero h1{
-  font-size:38px;
-  margin:10px 0;
-}
-
-.hero h1 span{
-  color:#00bcd4;
+  font-size:36px;
+  margin:15px 0;
 }
 
 .hero p{
   font-size:18px;
-  color:#555;
+  margin-bottom:25px;
+}
+
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.badge{
+  background:white;
+  color:#2a5298;
+  padding:8px 15px;
+  border-radius:20px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.hero-btn{
+  display:inline-block;
+  background:#25D366;
+  color:white;
+  padding:15px 30px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  transform:scale(1.05);
 }
 
 /* Секции */
 
-section{
-  padding:60px 20px;
-}
+section{ padding:60px 20px; }
 
 .container{
   max-width:1100px;
-  margin:0 auto;
+  margin:auto;
 }
 
 h2{
@@ -74,7 +94,87 @@ h2{
   margin-bottom:40px;
 }
 
-/* Сетка 2 в ряд */
+/* Услуги */
+
+.service-card{
+  background:white;
+  border-radius:25px;
+  padding:35px 25px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  transition:0.3s;
+  margin-bottom:30px;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+}
+
+.service-card h3{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.service-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 25px;
+}
+
+.service-list li{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+  font-size:16px;
+}
+
+.price{
+  font-weight:bold;
+  color:#2a5298;
+}
+
+.order-btn{
+  display:block;
+  text-align:center;
+  background:#25D366;
+  color:white;
+  padding:14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.order-btn:hover{
+  background:#1ebe5d;
+}
+
+/* Акция */
+
+.promo{
+  background:#2a5298;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  border-radius:25px;
+}
+
+.promo h3{
+  margin-bottom:15px;
+}
+
+.promo-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#25D366;
+  color:white;
+  padding:14px 25px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Почему мы */
 
 .grid{
   display:grid;
@@ -87,51 +187,6 @@ h2{
     grid-template-columns:1fr;
   }
 }
-
-/* Карточки */
-
-.service-card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-
-.service-card:hover{
-  transform:translateY(-5px);
-}
-
-.service-card img{
-  width:100%;
-  height:200px;
-  object-fit:contain;
-  background:white;
-  padding:20px;
-}
-
-.service-content{
-  padding:20px;
-  text-align:center;
-}
-
-.price{
-  color:#2a5298;
-  font-weight:bold;
-  margin-bottom:15px;
-}
-
-.service-btn{
-  display:block;
-  background:#25D366;
-  color:white;
-  padding:12px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* Почему мы */
 
 .card{
   background:white;
@@ -156,7 +211,7 @@ footer{
   padding:30px;
 }
 
-/* WhatsApp кнопка */
+/* WhatsApp */
 
 .whatsapp-float{
   position:fixed;
@@ -171,10 +226,8 @@ footer{
   justify-content:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
+.whatsapp-float img{ width:32px; }
 
-.whatsapp-float img{
-  width:32px;
-}
 </style>
 </head>
 
@@ -187,98 +240,39 @@ footer{
 </div>
 
 <div class="hero">
-  <div style="color:#777;">Сервисный центр → Сантехник</div>
-  <h1>САНТЕХНИК <span>БИШКЕК</span></h1>
-  <p>Бесплатный выезд сантехника за 30 минут!</p>
+  <h1>САНТЕХНИК БИШКЕК 24/7</h1>
+  <div class="badges">
+    <div class="badge">🚀 Выезд 30 минут</div>
+    <div class="badge">🛡 Гарантия 1 год</div>
+    <div class="badge">💰 Честные цены</div>
+  </div>
+  <p>Работаем круглосуточно. Срочный выезд мастера.</p>
+  <a href="https://wa.me/996705204886?text=Срочный вызов сантехника" class="hero-btn">СРОЧНЫЙ ВЫЗОВ</a>
 </div>
 
 <section>
 <div class="container">
 <h2>Наши услуги</h2>
 
-<div class="grid">
-
-<!-- 1 -->
 <div class="service-card">
-<img src="smesitel.jpg">
-<div class="service-content">
-<h3>🚰 Замена смесителя</h3>
-<div class="price">от 700 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20смесителя" class="service-btn">Заказать</a>
-</div>
-</div>
-
-<!-- 2 -->
-<div class="service-card">
-<img src="unitaz.jpg">
-<div class="service-content">
-<h3>🚽 Установка унитаза</h3>
-<div class="price">от 1500 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20унитаза" class="service-btn">Заказать</a>
-</div>
+<h3>Сантехнические работы</h3>
+<ul class="service-list">
+<li>Замена смесителя <span class="price">от 700 сом</span></li>
+<li>Установка унитаза <span class="price">от 1500 сом</span></li>
+<li>Установка раковины <span class="price">от 1200 сом</span></li>
+<li>Устранение засоров <span class="price">от 800 сом</span></li>
+<li>Замена труб <span class="price">от 1000 сом</span></li>
+<li>Установка бойлера <span class="price">от 2000 сом</span></li>
+</ul>
+<a href="https://wa.me/996705204886?text=Здравствуйте" class="order-btn">Заказать услугу</a>
 </div>
 
-<!-- 3 -->
-<div class="service-card">
-<img src="zasor.jpg">
-<div class="service-content">
-<h3>🚿 Устранение засоров</h3>
-<div class="price">от 800 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужно%20устранение%20засора" class="service-btn">Заказать</a>
-</div>
+<div class="promo">
+<h3>🎁 АКЦИЯ: Скидка 10% при обращении через сайт</h3>
+<p>Напишите нам прямо сейчас и получите скидку</p>
+<a href="https://wa.me/996705204886?text=Хочу скидку 10%" class="promo-btn">Получить скидку</a>
 </div>
 
-<!-- 4 -->
-<div class="service-card">
-<img src="boiler.jpg">
-<div class="service-content">
-<h3>🔥 Установка бойлера</h3>
-<div class="price">от 2000 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20бойлера" class="service-btn">Заказать</a>
-</div>
-</div>
-
-<!-- 5 -->
-<div class="service-card">
-<img src="radiator.jpg">
-<div class="service-content">
-<h3>♨ Установка радиатора</h3>
-<div class="price">от 1800 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20радиатора" class="service-btn">Заказать</a>
-</div>
-</div>
-
-<!-- 6 -->
-<div class="service-card">
-<img src="truba.jpg">
-<div class="service-content">
-<h3>🔧 Замена труб</h3>
-<div class="price">от 1000 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20замена%20труб" class="service-btn">Заказать</a>
-</div>
-</div>
-
-<!-- 7 -->
-<div class="service-card">
-<img src="vanna.jpg">
-<div class="service-content">
-<h3>🛁 Установка ванны</h3>
-<div class="price">от 2500 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20ванны" class="service-btn">Заказать</a>
-</div>
-</div>
-
-<!-- 8 -->
-<div class="service-card">
-<img src="rakovina.jpg">
-<div class="service-content">
-<h3>🚿 Установка раковины</h3>
-<div class="price">от 1200 сом</div>
-<a href="https://wa.me/996705204886?text=Здравствуйте,%20мне%20нужна%20установка%20раковины" class="service-btn">Заказать</a>
-</div>
-</div>
-
-</div>
 </div>
 </section>
 
@@ -288,7 +282,7 @@ footer{
 <div class="grid">
 <div class="card">✅ Работаем 24/7</div>
 <div class="card">🚀 Приезжаем за 30 минут</div>
-<div class="card">💰 Честные цены</div>
+<div class="card">💰 Без скрытых доплат</div>
 <div class="card">🛠 Опыт более 10 лет</div>
 </div>
 </div>
@@ -297,7 +291,7 @@ footer{
 <section>
 <div class="container">
 <h2>Работаем по всему Бишкеку</h2>
-<iframe src="https://maps.google.com/maps?q=Бишкек&t=&z=12&ie=UTF8&iwloc=&output=embed"
+<iframe src="https://maps.google.com/maps?q=Бишкек&output=embed"
 width="100%" height="400"></iframe>
 </div>
 </section>
